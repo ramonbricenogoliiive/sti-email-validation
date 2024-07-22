@@ -26,6 +26,10 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+})
+
 // Endpoint to send email
 app.post('/send-email/', async (req, res) => {
   try {
